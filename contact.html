@@ -1,0 +1,85 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SRVP Books — Contact</title>
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <header class="header">
+    <div class="container nav">
+      <div class="brand">
+        <div class="logo">SR</div>
+        <div>
+          <div>SRVP Books</div>
+          <small style="opacity:0.85;font-weight:600;">Contact</small>
+        </div>
+      </div>
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="shop.html">Shop</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="cart.html">Cart 🧾</a>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <h2>Contact Us</h2>
+    <p style="margin-top:8px;">Have a question, suggestion, or want to sell your used textbook? Send us a message and we'll get back to you.</p>
+
+    <div class="form" style="margin-top:12px;">
+      <label>Name</label>
+      <input id="name" placeholder="Your name" />
+      <label>Email</label>
+      <input id="email" placeholder="name@example.com" />
+      <label>Message</label>
+      <textarea id="message" rows="6" placeholder="How can we help?"></textarea>
+      <button onclick="send()">Send Message</button>
+    </div>
+
+    <footer class="footer">This contact form is static for the prototype — in production it would submit to a server or use a service.</footer>
+  </main>
+
+<script>
+function send(){
+  const name = document.getElementById('name').value.trim();
+  const email = document.getElementById('email').value.trim();
+  const msg = document.getElementById('message').value.trim();
+  if(!name || !email || !msg){ alert('Please fill all fields.'); return; }
+  alert('Thanks ' + name + '! Message received (demo).');
+  document.getElementById('name').value=''; document.getElementById('email').value=''; document.getElementById('message').value='';
+}
+</script>
+<!-- Add Font Awesome CDN in <head> -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css">
+
+  <!-- Footer -->
+  <footer style="background:#222; color:#fff; text-align:center; padding:20px 0; margin-top:40px;">
+    <p>&copy; 2025 SRVP Books. All rights reserved.</p>
+    
+    <p>
+      <a href="#" style="color:#fff; margin:0 10px; text-decoration:none;">Privacy Policy</a> |
+      <a href="#" style="color:#fff; margin:0 10px; text-decoration:none;">Terms of Service</a>
+    </p>
+  
+    <div style="margin-top:10px;">
+      <a href="https://facebook.com" target="_blank" style="color:#fff; margin:0 10px; font-size:20px;">
+        <i class="fab fa-facebook-f"></i>
+      </a>
+      <a href="https://instagram.com" target="_blank" style="color:#fff; margin:0 10px; font-size:20px;">
+        <i class="fab fa-instagram"></i>
+      </a>
+      <a href="https://twitter.com" target="_blank" style="color:#fff; margin:0 10px; font-size:20px;">
+        <i class="fab fa-x-twitter"></i>
+      </a>
+      <a href="https://linkedin.com" target="_blank" style="color:#fff; margin:0 10px; font-size:20px;">
+        <i class="fab fa-linkedin-in"></i>
+      </a>
+    </div>
+  </footer>
+  
+</body>
+</html>
